@@ -4,7 +4,7 @@
 \setbeamersize{text margin left=1em,text margin right=1em}
 
 \usepackage{amsmath,amssymb,amsfonts}
-
+\usepackage[version=4]{mhchem}
 \usepackage{siunitx}
 \DeclareSIUnit\year{yr}
 
@@ -98,12 +98,17 @@
 \begin{frame}
       \frametitle{\secname}
       \begin{columns}
-            \column{0.7\linewidth}
+            \column{0.5\linewidth}
             \centering
             \includegraphics[width=\textwidth]{tab1.png}
             \caption{Summary of experimental data on water storage capacity in olivine}
-            \column{0.3\linewidth}
-
+            \column{0.5\linewidth}
+            \small
+            \begin{align}
+                  \ln c_{\ce{H2O}} & = \ln \tfrac{1}{2 n}+a+\tfrac{n}{2} \ln f_{\ce{H20}}+\tfrac{b+c P+d X_{\ce{Fe}}}{T} \\
+                  \intertext{where $a$, $c$, and $d$ were found to be statistically insignificant}
+                                   & = \frac{n}{2} \ln f_{\ce{H20}}+\frac{b}{T}
+            \end{align}
       \end{columns}
 \end{frame}
 
